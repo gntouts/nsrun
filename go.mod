@@ -1,4 +1,4 @@
-module github.com/gntouts/execns
+module github.com/gntouts/nsrun
 
 go 1.20
 

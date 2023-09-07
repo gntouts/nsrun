@@ -1,11 +1,11 @@
-# execns
+# nsrun
 
-`execns` is a simple CLI utility used to run commands inside a specific process's network namespace.
+`nsrun` is a simple CLI utility used to run commands inside a specific process's network namespace.
 It can be useful when debugging processes with unnamed network namespaces (eg containers).
 
 ## Build from source
 
-To build from source and install `execns`, you can follow the instructions:
+To build from source and install `nsrun`, you can follow the instructions:
 
 ```bash
 make
@@ -14,15 +14,15 @@ sudo make install
 
 ## Usage
 
-`execns` usage is really simple:
+`nsrun` usage is really simple:
 
 ```text
 NAME:
-        execns - execute command in given process's network namespace
+        nsrun - execute command in given process's network namespace
                          
  
  USAGE:
-        execns [PID] [COMMAND]
+        nsrun [PID] [COMMAND]
 ```
 
 For example:
@@ -34,7 +34,7 @@ e7551fa8f7ab955b167d8728d5f0a7e2b8234c2bfff3465aa8f7d2b9ff96a96d
 gntouts@ktb:~$ ps -ef | grep sleep
 root      353396  353375  0 20:14 ?        00:00:00 sleep infinity
 
-gntouts@ktb:~$ sudo execns 353396 ip a
+gntouts@ktb:~$ sudo nsrun 353396 ip a
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
     inet 127.0.0.1/8 scope host lo

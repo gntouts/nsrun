@@ -76,10 +76,10 @@ func main() {
 
 func usage() {
 	usageMsg := `NAME:
-	execns - execute command in given process's network namespace
+	nsrun - execute command in given process's network namespace
 			 
  
  USAGE:
- 	execns [PID] [COMMAND]`
+ 	nsrun [PID] [COMMAND]`
 	fmt.Println(usageMsg)
 }
